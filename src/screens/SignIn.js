@@ -9,7 +9,7 @@ import { routes } from '../util/Constants'
 
 function SignIn(props) {
   const { isLoading, loginUser, errorMessage, error, token } = props
-  const { DEFAULT, GET_PRICE, SIGNIN } = routes
+  const { DEFAULT, GET_PRICE, SIGNUP } = routes
   let history = useHistory()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -52,7 +52,7 @@ function SignIn(props) {
           <Button
             variant="primary"
             type="button"
-            onClick={() => history.push(SIGNIN)}
+            onClick={() => history.push(SIGNUP)}
           >
             Create New
           </Button>
