@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Provider } from 'react-redux'
+import store from './redux/store'
+import Header from './components/Header'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Footer from './components/Footer'
+import AppRouter from './router/AppRouter'
+import PriceUpdate from './screens/PriceUpdate'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <div>
+        <Header />
+        <AppRouter />
+        {/* <PriceUpdate /> */}
+        <Footer />
+      </div>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
